@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CursoOnlineTdd.Domain", "Sr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsultaCredito", "Src\ConsultaCredito\ConsultaCredito.csproj", "{6FC2AB93-33F2-4F2D-B865-CB22C9F07303}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TddNetCoreDev.Api", "Src\NetCoreApiDevTDD\TddNetCoreDev.Api.csproj", "{750A4A53-BCFA-4467-8005-786F745AE519}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TddNetCoreDev.Api", "Src\NetCoreApiDevTDD\TddNetCoreDev.Api.csproj", "{750A4A53-BCFA-4467-8005-786F745AE519}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDDWithNetCoreXUnit.IntegrationTests", "Test\TDDWithNetCoreXUnit.IntegrationTests\TDDWithNetCoreXUnit.IntegrationTests.csproj", "{86EF32FC-289B-47A4-8E65-E4E53BFFA339}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{750A4A53-BCFA-4467-8005-786F745AE519}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{750A4A53-BCFA-4467-8005-786F745AE519}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{750A4A53-BCFA-4467-8005-786F745AE519}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86EF32FC-289B-47A4-8E65-E4E53BFFA339}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86EF32FC-289B-47A4-8E65-E4E53BFFA339}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86EF32FC-289B-47A4-8E65-E4E53BFFA339}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86EF32FC-289B-47A4-8E65-E4E53BFFA339}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
