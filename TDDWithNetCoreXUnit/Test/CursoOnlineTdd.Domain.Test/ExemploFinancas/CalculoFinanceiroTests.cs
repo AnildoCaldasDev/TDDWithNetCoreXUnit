@@ -1,7 +1,4 @@
-﻿using CursoOnlineTdd.Domain.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using TddNetCoreDev.Domain.Models;
 using Xunit;
 
 namespace TDDWithNetCoreXUnit.Test.ExemploFinancas

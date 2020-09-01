@@ -5,13 +5,13 @@ VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TDDWithNetCoreXUnit.Test", "Test\CursoOnlineTdd.Domain.Test\TDDWithNetCoreXUnit.Test.csproj", "{E1251B91-29E9-43D8-9A07-87E9DC51E509}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CursoOnlineTdd.Domain", "Src\CursoOnlineTdd.Domain\CursoOnlineTdd.Domain.csproj", "{489137A3-0650-44B1-B076-18EC476840DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TddNetCoreDev.Domain", "Src\CursoOnlineTdd.Domain\TddNetCoreDev.Domain.csproj", "{489137A3-0650-44B1-B076-18EC476840DF}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsultaCredito", "Src\ConsultaCredito\ConsultaCredito.csproj", "{6FC2AB93-33F2-4F2D-B865-CB22C9F07303}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TddNetCoreDev.Api", "Src\NetCoreApiDevTDD\TddNetCoreDev.Api.csproj", "{750A4A53-BCFA-4467-8005-786F745AE519}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TDDWithNetCoreXUnit.IntegrationTests", "Test\TDDWithNetCoreXUnit.IntegrationTests\TDDWithNetCoreXUnit.IntegrationTests.csproj", "{86EF32FC-289B-47A4-8E65-E4E53BFFA339}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TDDWithNetCoreXUnit.IntegrationTests", "Test\TDDWithNetCoreXUnit.IntegrationTests\TDDWithNetCoreXUnit.IntegrationTests.csproj", "{86EF32FC-289B-47A4-8E65-E4E53BFFA339}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

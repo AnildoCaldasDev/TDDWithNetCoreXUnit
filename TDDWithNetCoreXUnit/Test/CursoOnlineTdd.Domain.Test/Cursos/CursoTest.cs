@@ -1,11 +1,11 @@
-﻿using CursoOnlineTdd.Domain;
-using CursoOnlineTdd.Domain.Enums;
-using CursoOnlineTdd.Domain.Test.Utilidades;
-using ExpectedObjects;
+﻿using ExpectedObjects;
 using System;
+using TddNetCoreDev.Domain;
+using TddNetCoreDev.Domain.Enums;
+using TDDWithNetCoreXUnit.Test.Utilidades;
 using Xunit;
 
-namespace CursoOnlineTdd.Domain.Test.Cursos
+namespace TDDWithNetCoreXUnit.Test.Cursos
 {
     public class CursoTest
     {

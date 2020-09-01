@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace TDDWithNetCoreXUnit.Test.FisrtLessonTDD
+﻿namespace TDDWithNetCoreXUnit.Test.FisrtLessonTDD
 {
     public class FizzBuzzDetector
     {

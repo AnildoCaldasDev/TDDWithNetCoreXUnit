@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using Xunit;
 
-namespace CursoOnlineTdd.Domain.Test.Utilidades
+namespace TDDWithNetCoreXUnit.Test.Utilidades
 {
     public static class AssertExtension
     {

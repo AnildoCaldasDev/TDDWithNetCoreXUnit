@@ -25,7 +25,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Src\ConsultaCredito\ConsultaCredito.csproj" />
-    <ProjectReference Include="..\..\Src\CursoOnlineTdd.Domain\CursoOnlineTdd.Domain.csproj" />
+    <ProjectReference Include="..\..\Src\CursoOnlineTdd.Domain\TddNetCoreDev.Domain.csproj" />
     <ProjectReference Include="..\..\Src\NetCoreApiDevTDD\TddNetCoreDev.Api.csproj" />
   </ItemGroup>
 

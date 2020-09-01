@@ -1,9 +1,8 @@
-﻿using CursoOnlineTdd.Domain.Enums;
+﻿
 using System;
-using System.Collections.Generic;
-using System.Text;
+using TddNetCoreDev.Domain.Enums;
 
-namespace CursoOnlineTdd.Domain
+namespace TddNetCoreDev.Domain
 {
     public class Curso
     {

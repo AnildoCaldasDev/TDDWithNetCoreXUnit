@@ -1,4 +1,4 @@
-﻿namespace CursoOnlineTdd.Domain.Enums
+﻿namespace TddNetCoreDev.Domain.Enums
 {
     public enum PublicoAlvoEnum
     {

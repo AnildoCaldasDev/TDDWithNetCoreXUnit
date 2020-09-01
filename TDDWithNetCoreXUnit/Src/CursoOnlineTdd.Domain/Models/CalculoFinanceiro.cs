@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace CursoOnlineTdd.Domain.Models
+namespace TddNetCoreDev.Domain.Models
 {
     public class CalculoFinanceiro
     {
