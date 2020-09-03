@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Src\NetCoreApiDevTDD\TddNetCoreDev.Api.csproj" />
+    <ProjectReference Include="..\..\Src\TddNetCoreDev.Repositorio\TddNetCoreDev.Repositorio.csproj" />
   </ItemGroup>
 
 </Project>

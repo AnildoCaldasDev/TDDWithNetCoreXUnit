@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="ExpectedObjects" Version="2.3.4" />
+    <PackageReference Include="FluentAssertions" Version="5.10.3" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.7.1" />
     <PackageReference Include="Moq" Version="4.14.5" />
     <PackageReference Include="NSubstitute" Version="4.2.2" />
@@ -24,9 +25,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Src\ConsultaCredito\ConsultaCredito.csproj" />
-    <ProjectReference Include="..\..\Src\CursoOnlineTdd.Domain\TddNetCoreDev.Domain.csproj" />
     <ProjectReference Include="..\..\Src\NetCoreApiDevTDD\TddNetCoreDev.Api.csproj" />
+    <ProjectReference Include="..\..\Src\TddNetCoreDev.Domain\TddNetCoreDev.Domain.csproj" />
+    <ProjectReference Include="..\..\Src\TddNetCoreDev.Repositorio\TddNetCoreDev.Repositorio.csproj" />
   </ItemGroup>
 
 </Project>

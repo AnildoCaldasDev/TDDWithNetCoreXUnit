@@ -1,4 +1,4 @@
-﻿namespace ConsultaCredito.Enums
+﻿namespace TddNetCoreDev.Repositorio.Enums
 {
     public enum StatusConsultaCredito
     {

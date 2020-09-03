@@ -1,7 +1,7 @@
-﻿using ConsultaCredito.Models;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using TddNetCoreDev.Repositorio.Models;
 
-namespace ConsultaCredito.Interfaces
+namespace TddNetCoreDev.Repositorio.Interfaces
 {
     public interface IServicoConsultaCredito
     {

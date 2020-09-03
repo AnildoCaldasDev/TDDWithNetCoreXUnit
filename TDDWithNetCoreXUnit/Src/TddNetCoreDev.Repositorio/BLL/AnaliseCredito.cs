@@ -1,7 +1,7 @@
-﻿using ConsultaCredito.Enums;
-using ConsultaCredito.Interfaces;
+﻿using TddNetCoreDev.Repositorio.Enums;
+using TddNetCoreDev.Repositorio.Interfaces;
 
-namespace ConsultaCredito.BLL
+namespace TddNetCoreDev.Repositorio.BLL
 {
     public class AnaliseCredito
     {

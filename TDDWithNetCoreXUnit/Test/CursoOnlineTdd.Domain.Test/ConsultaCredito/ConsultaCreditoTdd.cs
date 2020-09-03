@@ -1,11 +1,10 @@
-﻿using ConsultaCredito.Interfaces;
+﻿using NSubstitute;
 using System;
 using System.Collections.Generic;
-using System.Text;
-using NSubstitute;
-using ConsultaCredito.Models;
-using ConsultaCredito.Enums;
-using ConsultaCredito.BLL;
+using TddNetCoreDev.Repositorio.BLL;
+using TddNetCoreDev.Repositorio.Enums;
+using TddNetCoreDev.Repositorio.Interfaces;
+using TddNetCoreDev.Repositorio.Models;
 using Xunit;
 
 namespace TDDWithNetCoreXUnit.Test.ConsultaCredito

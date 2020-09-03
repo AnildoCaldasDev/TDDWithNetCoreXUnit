@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ConsultaCredito.Models
+namespace TddNetCoreDev.Repositorio.Models
 {
     public class Pendencia
     {
