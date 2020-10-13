@@ -1,83 +1,126 @@
 ﻿using Moq;
+using System;
+using System.Collections.Generic;
 using System.Runtime.InteropServices.ComTypes;
 using Xunit;
 
 namespace TDDWithNetCoreXUnit.Test.MoqTutorial
 {
+
     public class MoqTutorialTest
     {
-
         [Fact]
-        public void GetPrefixedValue_Mock()
+        public void Somar_Dois_Numeros()
         {
-            var mock = new Mock<IMockTarget>();
-            mock.SetupGet(x => x.PropertyToMock).Returns("FixedValue");
+            //Arrange
+            Moq.Mock<ICalculadora> mock = new Mock<ICalculadora>();
+            mock.Setup(x => x.Calcular(It.IsAny<string>(), It.IsAny<double>(), It.IsAny<double>())).Returns(("somar", 7.7));
+            MaquinaCalculadoraAppService maqCalcServiceApp = new MaquinaCalculadoraAppService(mock.Object);
 
-            var classToTest = new ClassToTest();
-
-            var actualValue = classToTest.GetPrefixedValue(mock.Object);
-
-            Assert.Equal("Prefixed: FixedValue", actualValue);
-            mock.VerifyGet(x => x.PropertyToMock);
-        }
-
-
-        [Fact]
-        public void GetSomaValoresCalculator_Mock()
-        {
-            int x = 10;
-            int y = 20;
-            int somaResult = 30;
-
-            var mock = new Mock<IMockCalculator>();
-            mock.Setup(x => x.SomaDoisNumeros(10,20)).Returns(30);
-
-            var calcTest = new CalculatorTest(mock.Object);
-
-            int result = calcTest.SomaDoisNumeros(x, y);
-
-            Assert.Equal(somaResult, result);
-            mock.Verify(x => x.SomaDoisNumeros(It.IsAny<int>(), It.IsAny<int>()), Times.Once);
+            //assert
+            (string operacao, double resultado) op = maqCalcServiceApp.Calcular("somar", 3.2, 4.5);
+            
+            //act
+            Assert.Equal("somar", op.operacao);
+            Assert.Equal(7.7, op.resultado);
+            mock.Verify(x => x.Calcular(It.IsAny<string>(), It.IsAny<double>(), It.IsAny<double>()), Times.Once);
         }
     }
 
 
-    public class ClassToTest
+    public class MaquinaCalculadoraAppService
     {
-        public string GetPrefixedValue(IMockTarget provider)
+        private ICalculadora _calc;
+
+        public MaquinaCalculadoraAppService() : this(new CalculadoraServiceDomain()) { }
+
+        public MaquinaCalculadoraAppService(ICalculadora calc)
         {
-            return "Prefixed: " + provider.PropertyToMock;
+            this._calc = calc;
+        }
+
+        public (string operacao, double resultado) Calcular(string operacao, double a, double b)
+        {
+            return _calc.Calcular(operacao, a, b);
         }
     }
 
-    public class CalculatorTest : IMockCalculator
+
+    public interface ICalculadora
     {
-        private readonly IMockCalculator _mock;
-
-        public CalculatorTest(IMockCalculator mock)
-        {
-            _mock = mock;
-        }
-
-
-        public int SomaDoisNumeros(int x, int y)
-        {
-
-            return _mock.SomaDoisNumeros(x, y);
-
-         //   return x + y;
-        }
+        (string operacao, double resultado) Calcular(string operacao, double a, double b);
+        List<string> GetListaOperacaoPorCodigoDeNivel(int level);
     }
 
-
-    public interface IMockTarget
+    public class CalculadoraServiceDomain : ICalculadora
     {
-        public string PropertyToMock { get; set; }
+        public (string operacao, double resultado) Calcular(string operacao, double a, double b)
+        {
+            (string operacao, double resultado) resultadoOperacao;
+            double c;
+            switch (operacao)
+            {
+                case "somar":
+                    c = a + b;
+                    break;
+                case "subtrair":
+                    c = a - b;
+                    break;
+                case "multiplicar":
+                    c = a * b;
+                    break;
+                case "dividir":
+                    c = Math.Round(a / b, 2);
+                    break;
+                default:
+                    c = a + b;
+                    break;
+            }
+
+            resultadoOperacao = (operacao, c);
+            return resultadoOperacao;
+        }
+
+        public List<string> GetListaOperacaoPorCodigoDeNivel(int level)
+        {
+            List<string> listaniveis = new List<string>();
+
+
+
+
+
+        }
     }
 
-    public interface IMockCalculator
-    {    
-        public int SomaDoisNumeros(int x, int y);
-    }
 
+
+
+    //public class MoqTutorialTest
+    //{
+    //    [Fact]
+    //    public void GetPrefixedValue_Mock()
+    //    {
+    //        var mock = new Mock<IMockTarget>();
+    //        mock.SetupGet(x => x.PropertyToMock).Returns("FixedValue");
+
+    //        var classToTest = new ClassToTest();
+
+    //        var actualValue = classToTest.GetPrefixedValue(mock.Object);
+
+    //        Assert.Equal("Prefixed: FixedValue", actualValue);
+    //        mock.VerifyGet(x => x.PropertyToMock);
+    //    }        
+    //}
+
+    //public class ClassToTest
+    //{
+    //    public string GetPrefixedValue(IMockTarget provider)
+    //    {
+    //        return "Prefixed: " + provider.PropertyToMock;
+    //    }
+    //}
+    //public interface IMockTarget
+    //{
+    //    public string PropertyToMock { get; set; }
+    //}
 }
